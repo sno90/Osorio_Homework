@@ -32,12 +32,15 @@ with open(bank_data_path, newline= '') as budget:
     for i in range(len(revenue)-1):
         monthly_revenue_change.append(revenue[i+1]-revenue[i])
 
+# use min and max functions to calculate highest and lowest revenues
 max_revenue = max(monthly_revenue_change)
 min_revenue = min(monthly_revenue_change)
 
+#get the month that had the highest and lowest revenues
 max_revenue_month = monthly_revenue_change.index(max(monthly_revenue_change)) + 1
 min_revenue_month = monthly_revenue_change.index(min(monthly_revenue_change)) + 1
 
+#print analysis of the budget
 print('Financial Analysis')
 print('----------------------------')
 print(f'Total Months: {len(months)}')
@@ -46,6 +49,7 @@ print(f'Average Change: ${round(sum(monthly_revenue_change)/len(monthly_revenue_
 print(f'Greatest Increase in Profits: {months[max_revenue_month]} (${(str(max_revenue))})')
 print(f'Greatest Decrease in Profits: {months[min_revenue_month]} (${(str(min_revenue))})')
 
+#set path for output file and write analysis to csv
 output_file = os.path.join('Resources','budget_data_analysis.csv')
 
 with open(output_file,'w') as file:
