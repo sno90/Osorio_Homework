@@ -1,1 +1,0 @@
-database_url='postgresql://postgres:password@localhost:5432/EmployeeDB'
