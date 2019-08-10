@@ -1,10 +1,10 @@
 -- Drop Tables if Existing
-DROP TABLE IF EXISTS departments;
-DROP TABLE IF EXISTS dept_employee;
-DROP TABLE IF EXISTS dept_manager;
-DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS salaries;
-DROP TABLE IF EXISTS titles;
+DROP TABLE IF EXISTS departments CASCADE;
+DROP TABLE IF EXISTS dept_employee CASCADE;
+DROP TABLE IF EXISTS dept_manager CASCADE;
+DROP TABLE IF EXISTS employees CASCADE;
+DROP TABLE IF EXISTS salaries CASCADE;
+DROP TABLE IF EXISTS titles CASCADE;
 
 -- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
@@ -50,6 +50,7 @@ CREATE TABLE "dept_manager" (
 );
 
 CREATE TABLE "salaries" (
+	"id" SERIAL PRIMARY KEY NOT NULL,
     "emp_no" INT   NOT NULL,
     "salary" INT   NOT NULL,
     "from_date" DATE   NOT NULL,
@@ -58,6 +59,7 @@ CREATE TABLE "salaries" (
 
 
 CREATE TABLE "titles" (
+	"id" SERIAL PRIMARY KEY NOT NULL,
     "emp_no" INT   NOT NULL,
     "title" VARCHAR   NOT NULL,
     "from_date" DATE   NOT NULL,
