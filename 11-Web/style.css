@@ -5,118 +5,44 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
+  text-align: center;
 }
 
 h3 {
-  font-size: 40px;
-}
-
-img {
-  float: left;
+  font-size: 10px;
+  text-align: center;
 }
 
 p {
-  padding: 5px 20px 30px;
-  font-size: 20px;
+  font-size: 20px
 }
 
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  font-family: Arial;
-  margin-right: 0px;
-  margin-left: 0px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  align-content: center;
+.nav {
+  background: white;
 }
 
-/* Links inside the navbar */
-.navbar a {
+/* data.html - make the even rows grey and odd rows white */
+tr:nth-child(even) {
+  background: #CCC
+}
+tr:nth-child(odd) {
+  background: #FFF
+}
+
+/* img {
   float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
 }
 
+.clearfix {
+  overflow: auto;
+} */
 
-/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line.*/
-.navbar li {
-  display: d-block;
+.box{
   padding: 10px;
-  margin-right: 0px;
-  margin-left: 0px;
-  cursor: pointer;
-}
-
-/* The dropdown container*/
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px; 
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #1FA7B2;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
-@media (max-width: 480px) {
-  .navbar li {
-    padding: 10px;
-  }
-
-  .navbar ul {
-    visibility: hidden;
-  }
-
-  #nav-select {
-    visibility: visible;
-  }
+  background: white;
+  margin-top:20px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:20px;
 }
